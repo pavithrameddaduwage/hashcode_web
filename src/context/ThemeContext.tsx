@@ -18,6 +18,8 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 const THEME_CHANNEL = "hashtag_code_theme_sync";
+const LOCAL_STORAGE_ACCENT_KEY = "hashcode_theme_accent";
+const LOCAL_STORAGE_NAME_KEY = "hashcode_theme_name";
 
 export function ThemeProvider({
   children,
@@ -46,6 +48,22 @@ export function ThemeProvider({
   }, []);
 
   const refreshTheme = useCallback(async () => {
+    // 1. Check local storage first (instant client persistence on Netlify / Vercel)
+    if (typeof window !== "undefined") {
+      try {
+        const localSaved = localStorage.getItem(LOCAL_STORAGE_ACCENT_KEY);
+        if (localSaved) {
+          const localName = localStorage.getItem(LOCAL_STORAGE_NAME_KEY) || "Custom";
+          setTheme({ accentColor: localSaved, accentName: localName });
+          applyCssVariables(localSaved);
+          return;
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    // 2. Fetch from API fallback
     try {
       const res = await fetch("/api/theme", { cache: "no-store" });
       if (res.ok) {
@@ -66,19 +84,36 @@ export function ThemeProvider({
       applyCssVariables(hex);
       setTheme({ accentColor: hex, accentName: name || "Custom" });
 
-      const res = await fetch("/api/theme", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accentColor: hex, accentName: name }),
-      });
-
-      if (res.ok) {
-        // Broadcast across tabs
-        if (typeof window !== "undefined" && "BroadcastChannel" in window) {
-          const ch = new BroadcastChannel(THEME_CHANNEL);
-          ch.postMessage({ type: "THEME_UPDATED", accentColor: hex });
-          ch.close();
+      // 1. Persist to localStorage (guaranteed survival on static / serverless hosts like Netlify)
+      if (typeof window !== "undefined") {
+        try {
+          localStorage.setItem(LOCAL_STORAGE_ACCENT_KEY, hex);
+          if (name) localStorage.setItem(LOCAL_STORAGE_NAME_KEY, name);
+          // 2. Also persist to Cookie for 1 year
+          document.cookie = `hashcode_theme_accent=${encodeURIComponent(
+            hex
+          )}; path=/; max-age=31536000; SameSite=Lax`;
+        } catch (e) {
+          // ignore
         }
+      }
+
+      // 3. Save to server API
+      try {
+        await fetch("/api/theme", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ accentColor: hex, accentName: name }),
+        });
+      } catch (e) {
+        // ignore serverless write failure if on static host
+      }
+
+      // 4. Broadcast across tabs
+      if (typeof window !== "undefined" && "BroadcastChannel" in window) {
+        const ch = new BroadcastChannel(THEME_CHANNEL);
+        ch.postMessage({ type: "THEME_UPDATED", accentColor: hex });
+        ch.close();
       }
     } finally {
       setIsLoading(false);
@@ -86,7 +121,23 @@ export function ThemeProvider({
   };
 
   useEffect(() => {
-    applyCssVariables(theme.accentColor);
+    // Hydrate from localStorage on client mount if present
+    if (typeof window !== "undefined") {
+      try {
+        const savedHex = localStorage.getItem(LOCAL_STORAGE_ACCENT_KEY);
+        if (savedHex) {
+          const savedName = localStorage.getItem(LOCAL_STORAGE_NAME_KEY) || "Custom";
+          setTheme({ accentColor: savedHex, accentName: savedName });
+          applyCssVariables(savedHex);
+        } else {
+          applyCssVariables(theme.accentColor);
+        }
+      } catch (e) {
+        applyCssVariables(theme.accentColor);
+      }
+    } else {
+      applyCssVariables(theme.accentColor);
+    }
 
     let channel: BroadcastChannel | null = null;
     if (typeof window !== "undefined" && "BroadcastChannel" in window) {
@@ -118,4 +169,3 @@ export function useTheme() {
   }
   return context;
 }
-
