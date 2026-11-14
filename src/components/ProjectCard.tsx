@@ -47,7 +47,7 @@ export function ProjectCard({
           </p>
         </div>
 
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:scale-105 group-hover:rotate-45">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--accent-color)] text-[var(--accent-contrast,#000)] transition-transform duration-200 group-hover:scale-105 group-hover:rotate-45">
           <ArrowUpRight className="h-4 w-4 stroke-[2.2]" />
         </span>
       </div>

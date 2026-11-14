@@ -243,7 +243,7 @@ export default function HomePage() {
                   the fix.
                   <span
                     aria-hidden="true"
-                    className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[#D4FF00] -z-10"
+                    className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[var(--accent-color)] -z-10"
                   />
                 </span>
               </h1>
@@ -269,7 +269,7 @@ export default function HomePage() {
                   className="group inline-flex items-center justify-between sm:justify-start gap-4 rounded-full bg-neutral-950 pl-6 pr-2 py-2 text-[15.5px] font-semibold text-white transition-all hover:bg-neutral-800"
                 >
                   <span>Start a project</span>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-color)] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
                     <ArrowUpRight className="h-4 w-4 stroke-[2.5]" />
                   </span>
                 </Link>
@@ -301,14 +301,14 @@ export default function HomePage() {
                 />
 
                 {/* Ambient lime core spotlight behind the cards */}
-                <div className="pointer-events-none absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 w-[360px] h-[280px] rounded-full bg-[#D4FF00]/25 blur-[65px]" />
+                <div className="pointer-events-none absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 w-[360px] h-[280px] rounded-full bg-[var(--accent-color)]/25 blur-[65px]" />
 
                 {/* Technical frame header */}
                 <div className="relative z-10 flex items-center justify-between border-b border-neutral-200/80 pb-3 mb-4 text-[12px] font-mono text-neutral-400">
                   <div className="flex items-center gap-2">
                     <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#D4FF00] opacity-75" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[#D4FF00]" />
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent-color)] opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent-color)]" />
                     </span>
                     <span className="font-semibold text-neutral-800 uppercase tracking-wider">
                       STUDIO.SYS // DEPLOYMENT PREVIEW
@@ -433,7 +433,7 @@ export default function HomePage() {
               අදම හදාගන්න
               <span
                 aria-hidden="true"
-                className="absolute left-[-2px] right-[-2px] bottom-[2px] h-[36%] bg-[#D4FF00] -z-10"
+                className="absolute left-[-2px] right-[-2px] bottom-[2px] h-[36%] bg-[var(--accent-color)] -z-10"
               />
             </span>
           </h2>
@@ -506,7 +506,7 @@ export default function HomePage() {
                         <ul className="space-y-1 pt-1">
                           {pillar.bullets.map((b) => (
                             <li key={b} className="flex items-center gap-2">
-                              <span className="inline-flex h-4 w-4 items-center justify-center rounded-xs bg-[#D4FF00] text-[12px] font-bold text-black">
+                              <span className="inline-flex h-4 w-4 items-center justify-center rounded-xs bg-[var(--accent-color)] text-[12px] font-bold text-black">
                                 +
                               </span>
                               <span>{b}</span>
@@ -579,7 +579,7 @@ export default function HomePage() {
                       key={bullet}
                       className="flex items-center gap-3 text-[16.5px] font-medium text-neutral-800"
                     >
-                      <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-[3px] bg-[#D4FF00] text-[12.5px] font-mono font-bold text-neutral-950">
+                      <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-[3px] bg-[var(--accent-color)] text-[12.5px] font-mono font-bold text-neutral-950">
                         +
                       </span>
                       <span>{bullet}</span>
@@ -590,7 +590,7 @@ export default function HomePage() {
                 <div className="mt-8">
                   <Link
                     href="#contact"
-                    className="inline-block text-[16.5px] font-bold text-neutral-950 border-b-[3px] border-[#D4FF00] pb-0.5 hover:opacity-80 transition-opacity"
+                    className="inline-block text-[16.5px] font-bold text-neutral-950 border-b-[3px] border-[var(--accent-color)] pb-0.5 hover:opacity-80 transition-opacity"
                   >
                     {currentService.ctaText}
                   </Link>
@@ -648,7 +648,7 @@ export default function HomePage() {
                   In production.
                   <span
                     aria-hidden="true"
-                    className="absolute left-[-4px] right-[-4px] bottom-[3px] sm:bottom-[5px] h-[36%] bg-[#D4FF00] -z-10"
+                    className="absolute left-[-4px] right-[-4px] bottom-[3px] sm:bottom-[5px] h-[36%] bg-[var(--accent-color)] -z-10"
                   />
                 </span>
               </h2>
@@ -699,7 +699,7 @@ export default function HomePage() {
                 Zero guesswork.
                 <span
                   aria-hidden="true"
-                  className="absolute left-[-4px] right-[-4px] bottom-[3px] sm:bottom-[5px] h-[36%] bg-[#D4FF00] -z-10"
+                  className="absolute left-[-4px] right-[-4px] bottom-[3px] sm:bottom-[5px] h-[36%] bg-[var(--accent-color)] -z-10"
                 />
               </span>
             </h2>
@@ -759,7 +759,7 @@ export default function HomePage() {
                 className="group inline-flex items-center gap-3.5 rounded-full bg-neutral-950 pl-6 pr-2 py-2 text-[16.5px] font-semibold text-white transition-all hover:bg-neutral-800"
               >
                 <span>Book a discovery call</span>
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--accent-color)] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
                   <ArrowUpRight className="h-3.5 w-3.5 stroke-[2.5]" />
                 </span>
               </Link>
@@ -768,7 +768,7 @@ export default function HomePage() {
         </section>
 
         {/* CAMPUS.DEBUG */}
-        <section id="students" className="w-full bg-[#D4FF00] py-10 lg:py-16">
+        <section id="students" className="w-full bg-[var(--accent-color)] py-10 lg:py-16">
           <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               <div className="lg:col-span-6">
@@ -795,7 +795,7 @@ export default function HomePage() {
                     className="group inline-flex items-center gap-3.5 rounded-full bg-neutral-950 pl-6 pr-2 py-2 text-[16.5px] font-semibold text-white transition-all hover:bg-neutral-800"
                   >
                     <span>Book a consultation</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--accent-color)] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
                       <ArrowUpRight className="h-3.5 w-3.5 stroke-[2.5]" />
                     </span>
                   </Link>
@@ -831,7 +831,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="rounded-2xl bg-neutral-950 text-white p-6 sm:p-7 shadow-xs">
-                  <div className="text-[12px] font-mono text-[#D4FF00] mb-2">
+                  <div className="text-[12px] font-mono text-[var(--accent-color)] mb-2">
                     03
                   </div>
                   <h3 className="text-[20px] font-extrabold tracking-tight text-white">
@@ -864,7 +864,7 @@ export default function HomePage() {
                   #code.
                   <span
                     aria-hidden="true"
-                    className="absolute left-[-4px] right-[-4px] bottom-[3px] h-[36%] bg-[#D4FF00] -z-10"
+                    className="absolute left-[-4px] right-[-4px] bottom-[3px] h-[36%] bg-[var(--accent-color)] -z-10"
                   />
                 </span>
               </h2>
@@ -922,7 +922,7 @@ export default function HomePage() {
                   here.
                   <span
                     aria-hidden="true"
-                    className="absolute left-[-4px] right-[-4px] bottom-[4px] h-[36%] bg-[#D4FF00] -z-10"
+                    className="absolute left-[-4px] right-[-4px] bottom-[4px] h-[36%] bg-[var(--accent-color)] -z-10"
                   />
                 </span>
               </h2>
@@ -938,7 +938,7 @@ export default function HomePage() {
                   </div>
                   <a
                     href="mailto:hasgtagcode.solutions@gmail.com"
-                    className="text-[17.5px] font-bold text-neutral-950 hover:underline decoration-[#D4FF00] decoration-2"
+                    className="text-[17.5px] font-bold text-neutral-950 hover:underline decoration-[var(--accent-color)] decoration-2"
                   >
                     hasgtagcode.solutions@gmail.com
                   </a>

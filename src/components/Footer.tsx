@@ -11,7 +11,7 @@ export function Footer() {
               href="/"
               className="inline-flex items-center text-[22px] font-extrabold tracking-tight text-neutral-950"
             >
-              <span className="inline-flex items-center justify-center bg-[#D4FF00] px-1 py-0.5 leading-none mr-0.5 rounded-[2px]">
+              <span className="inline-flex items-center justify-center bg-[var(--accent-color)] text-[var(--accent-contrast,#000)] px-1 py-0.5 leading-none mr-0.5 rounded-[2px]">
                 #
               </span>
               <span>code</span>

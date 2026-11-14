@@ -118,9 +118,9 @@ export function TypewriterHeading() {
         })}
         {/* Blinking Dot: Always blinks like a terminal cursor */}
         <span
-          className="inline-block text-[#D4FF00] font-black ml-0.5 animate-terminal-dot"
+          className="inline-block text-[var(--accent-color)] font-black ml-0.5 animate-terminal-dot"
           style={{
-            textShadow: "0 0 12px rgba(212, 255, 0, 0.9)",
+            textShadow: "0 0 12px var(--accent-color)",
           }}
           aria-hidden="true"
         >

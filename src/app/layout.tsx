@@ -9,7 +9,9 @@ import "./globals.css";
 import "./code-loader.css";
 import { CodeLoader } from "@/components/CodeLoader";
 import { ProjectsProvider } from "@/context/ProjectsContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { getProjects } from "@/lib/projects";
+import { getTheme } from "@/lib/theme";
 
 export const metadata: Metadata = {
   title: "#code",
@@ -31,17 +33,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const initialProjects = getProjects();
+  const initialTheme = getTheme();
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <style
+          id="theme-accent-style"
+          dangerouslySetInnerHTML={{
+            __html: `:root { --accent-color: ${initialTheme.accentColor}; }`,
+          }}
+        />
+      </head>
       <body
-        className="antialiased selection:bg-[#D4FF00] selection:text-neutral-950"
+        className="antialiased selection:bg-[var(--accent-color)] selection:text-neutral-950"
         suppressHydrationWarning
       >
-        <CodeLoader />
-        <ProjectsProvider initialProjects={initialProjects}>
-          {children}
-        </ProjectsProvider>
+        <ThemeProvider initialTheme={initialTheme}>
+          <CodeLoader />
+          <ProjectsProvider initialProjects={initialProjects}>
+            {children}
+          </ProjectsProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

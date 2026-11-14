@@ -46,10 +46,10 @@ export function ProjectPreview({
       {badge}
       <div className="flex items-center justify-between">
         <span className="inline-flex items-center gap-1 text-[9px] font-mono text-white/80">
-          <span className="bg-[#D4FF00] text-black px-1 font-bold">#</span>
+          <span className="bg-[var(--accent-color)] text-[var(--accent-contrast,#000)] px-1 font-bold">#</span>
           code
         </span>
-        <span className="text-[8px] font-mono uppercase tracking-widest text-[#D4FF00]">
+        <span className="text-[8px] font-mono uppercase tracking-widest text-[var(--accent-color)]">
           {project.category}
         </span>
       </div>
@@ -60,7 +60,7 @@ export function ProjectPreview({
         <div className="text-xs text-neutral-400 mt-0.5">{project.subtitle}</div>
       </div>
       <div className="flex items-center gap-1.5 text-[9px] font-mono text-neutral-400">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#D4FF00]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-color)]" />
         <span>LIVE IN PRODUCTION</span>
       </div>
     </div>

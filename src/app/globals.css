@@ -6,6 +6,8 @@
       Roboto, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
       Consolas, monospace;
+    --accent-color: #D4FF00;
+    --accent-contrast: #0d0d0d;
   }
 
   html {
@@ -30,6 +32,40 @@
   }
 }
 
+/* Global Dynamic Theme Utilities */
+.bg-accent {
+  background-color: var(--accent-color) !important;
+  color: var(--accent-contrast) !important;
+}
+
+.bg-accent-raw {
+  background-color: var(--accent-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
+}
+
+.decoration-accent {
+  text-decoration-color: var(--accent-color) !important;
+}
+
+.ring-accent {
+  --tw-ring-color: var(--accent-color) !important;
+}
+
+.fill-accent {
+  fill: var(--accent-color) !important;
+}
+
+.stroke-accent {
+  stroke: var(--accent-color) !important;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -50,4 +86,3 @@
 .animate-terminal-dot {
   animation: terminalDotBlink 0.9s steps(1) infinite;
 }
-

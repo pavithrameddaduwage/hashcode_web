@@ -21,7 +21,7 @@ export function Navbar() {
           href="/"
           className="inline-flex items-center text-[22px] font-extrabold tracking-tight text-neutral-950"
         >
-          <span className="inline-flex items-center justify-center bg-[#D4FF00] px-1 py-0.5 leading-none mr-0.5 rounded-[2px]">
+          <span className="inline-flex items-center justify-center bg-[var(--accent-color)] text-[var(--accent-contrast,#000)] px-1 py-0.5 leading-none mr-0.5 rounded-[2px]">
             #
           </span>
           <span>code</span>
@@ -32,7 +32,7 @@ export function Navbar() {
             href="/work"
             className={`transition-colors hover:text-neutral-950 ${
               isWorkPage
-                ? "text-neutral-950 underline decoration-[#D4FF00] decoration-2 underline-offset-8 font-semibold"
+                ? "text-neutral-950 underline decoration-[var(--accent-color)] decoration-2 underline-offset-8 font-semibold"
                 : ""
             }`}
           >
@@ -70,7 +70,7 @@ export function Navbar() {
             className="group inline-flex items-center gap-3 rounded-full bg-neutral-950 pl-5 pr-1.5 py-1.5 text-[14.5px] font-semibold text-white transition-all hover:bg-neutral-800"
           >
             <span>Start a project</span>
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--accent-color)] text-[var(--accent-contrast,#000)] transition-transform duration-200 group-hover:rotate-45">
               <ArrowUpRight className="h-3.5 w-3.5 stroke-[2.5]" />
             </span>
           </Link>
@@ -145,7 +145,7 @@ export function Navbar() {
               className="flex w-full items-center justify-between rounded-full bg-neutral-950 pl-5 pr-2 py-2 text-sm font-semibold text-white"
             >
               <span>Start a project</span>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-color)] text-[var(--accent-contrast,#000)]">
                 <ArrowUpRight className="h-4 w-4 stroke-[2.5]" />
               </span>
             </Link>

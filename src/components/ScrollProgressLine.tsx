@@ -143,14 +143,14 @@ export function ScrollProgressLine() {
               dx="0"
               dy="0"
               stdDeviation="2.5"
-              floodColor="#D4FF00"
+              floodColor="var(--accent-color, #D4FF00)"
               floodOpacity="0.85"
             />
             <feDropShadow
               dx="0"
               dy="0"
               stdDeviation="8"
-              floodColor="#D4FF00"
+              floodColor="var(--accent-color, #D4FF00)"
               floodOpacity="0.45"
             />
           </filter>
@@ -171,7 +171,7 @@ export function ScrollProgressLine() {
           ref={glowPathRef}
           d={SVG_PATH}
           fill="none"
-          stroke="#D4FF00"
+          stroke="var(--accent-color, #D4FF00)"
           strokeWidth="5.5"
           strokeOpacity="0.25"
           strokeLinecap="round"
@@ -187,7 +187,7 @@ export function ScrollProgressLine() {
           ref={pathRef}
           d={SVG_PATH}
           fill="none"
-          stroke="#D4FF00"
+          stroke="var(--accent-color, #D4FF00)"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -211,9 +211,9 @@ export function ScrollProgressLine() {
       >
         <div className="relative flex h-5 w-5 items-center justify-center">
           {/* Pulsing radar wave */}
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#D4FF00] opacity-40" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent-color)] opacity-40" />
           {/* Glowing lime ring */}
-          <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-[#D4FF00] shadow-[0_0_12px_#D4FF00]" />
+          <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-[var(--accent-color)] shadow-[0_0_12px_var(--accent-color)]" />
           {/* High-contrast core dot */}
           <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-neutral-950" />
         </div>

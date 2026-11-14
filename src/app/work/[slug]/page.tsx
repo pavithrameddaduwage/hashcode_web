@@ -55,7 +55,7 @@ export default function CaseStudyPage() {
               {project.heroHighlight || project.subtitle}
               <span
                 aria-hidden="true"
-                className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[#D4FF00] -z-10"
+                className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[var(--accent-color)] -z-10"
               />
             </span>
           </h1>
@@ -159,7 +159,7 @@ export default function CaseStudyPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-[#D4FF00] p-7 sm:p-9">
+            <div className="rounded-2xl bg-[var(--accent-color)] p-7 sm:p-9">
               <div className="text-[12.5px] font-mono text-neutral-800/80 mb-2">
                 $ code build --fix
               </div>
@@ -254,7 +254,7 @@ export default function CaseStudyPage() {
                 <div className="mt-3">
                   <Link
                     href={`/work/${nextProject.slug}`}
-                    className="inline-block text-[16.5px] font-bold text-neutral-950 border-b-[3px] border-[#D4FF00] pb-0.5 hover:opacity-80"
+                    className="inline-block text-[16.5px] font-bold text-neutral-950 border-b-[3px] border-[var(--accent-color)] pb-0.5 hover:opacity-80"
                   >
                     {nextProject.subtitle} ·{" "}
                     {nextProject.category === "ERP"

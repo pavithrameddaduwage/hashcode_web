@@ -41,7 +41,7 @@ export default function WorkPage() {
                   All in production.
                   <span
                     aria-hidden="true"
-                    className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[#D4FF00] -z-10"
+                    className="absolute left-[-4px] right-[-6px] bottom-[4px] sm:bottom-[6px] h-[36%] bg-[var(--accent-color)] -z-10"
                   />
                 </span>
               </h1>
@@ -117,7 +117,7 @@ export default function WorkPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#D4FF00] py-20 lg:py-24">
+        <section className="w-full bg-[var(--accent-color)] py-20 lg:py-24">
           <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
             <h2 className="text-[40px] sm:text-[52px] lg:text-[58px] font-extrabold leading-[1.02] tracking-[-0.04em] text-neutral-950">
               Your project
@@ -130,7 +130,7 @@ export default function WorkPage() {
               className="group inline-flex items-center gap-3.5 rounded-full bg-neutral-950 pl-6 pr-2 py-2.5 text-[15.5px] font-semibold text-white transition-all hover:bg-neutral-800"
             >
               <span>Let&apos;s build the fix</span>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D4FF00] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent-color)] text-neutral-950 transition-transform duration-200 group-hover:rotate-45">
                 <ArrowUpRight className="h-4 w-4 stroke-[2.5]" />
               </span>
             </Link>

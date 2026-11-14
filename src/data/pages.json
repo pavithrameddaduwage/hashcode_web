@@ -1,0 +1,139 @@
+[
+  {
+    "id": "page-enterprise",
+    "slug": "enterprise",
+    "title": "Enterprise Engineering & Cloud Systems",
+    "description": "High-availability backend architecture, custom ERP integrations and enterprise software solutions engineered by #code.",
+    "status": "published",
+    "theme": {
+      "accentColor": "#D4FF00",
+      "fontFamily": "space-grotesk",
+      "surfaceMode": "light"
+    },
+    "createdAt": "2026-11-14T00:00:00.000Z",
+    "updatedAt": "2026-11-14T00:00:00.000Z",
+    "blocks": [
+      {
+        "id": "blk-hero-1",
+        "type": "hero",
+        "enabled": true,
+        "title": "Enterprise Hero Banner",
+        "data": {
+          "badge": "ENTERPRISE · ARCHITECTURE",
+          "heading": "Mission-critical systems.",
+          "highlightText": "Engineered for zero downtime.",
+          "subtitle": "We design, build and deploy fault-tolerant backends, high-concurrency APIs and custom ERP platforms that power multi-million dollar business workflows.",
+          "primaryButtonText": "Schedule Technical Consultation",
+          "primaryButtonLink": "#contact",
+          "secondaryButtonText": "Explore Case Studies",
+          "secondaryButtonLink": "/work",
+          "terminalCommand": "code deploy --env=enterprise --ha --cluster=auto",
+          "terminalLines": [
+            { "type": "cmd", "text": "$ code verify --security --compliance" },
+            { "type": "add", "text": "+ 99.99% SLA verified across all nodes" },
+            { "type": "add", "text": "+ sub-15ms p99 response time on queries" },
+            { "type": "out", "text": "> ready for institutional traffic" }
+          ]
+        }
+      },
+      {
+        "id": "blk-metrics-1",
+        "type": "metrics",
+        "enabled": true,
+        "title": "Performance Metrics",
+        "data": {
+          "tag": "SCALE · RELIABILITY",
+          "title": "Engineered for real-world production demands",
+          "items": [
+            { "metric": "99.99%", "label": "production uptime guarantee", "description": "Continuous zero-downtime rolling deploys" },
+            { "metric": "<15ms", "label": "p99 database query response", "description": "PostgreSQL indexing & query tuning" },
+            { "metric": "100%", "label": "automated daily encrypted backups", "description": "Disaster recovery ready in minutes" },
+            { "metric": "50K+", "label": "concurrent daily operations", "description": "Stress-tested under real business volume" }
+          ]
+        }
+      },
+      {
+        "id": "blk-features-1",
+        "type": "features",
+        "enabled": true,
+        "title": "Core Enterprise Capabilities",
+        "data": {
+          "tag": "CAPABILITIES",
+          "title": "Everything your operations need to scale without friction",
+          "subtitle": "Modular, maintainable architecture designed to replace messy spreadsheets and legacy systems.",
+          "items": [
+            {
+              "number": "01",
+              "tag": "ERP & POS",
+              "title": "Multi-Branch Business ERP",
+              "description": "Unified stock control, batch-wise expiry monitoring, and counter billing connected in real time."
+            },
+            {
+              "number": "02",
+              "tag": "CLOUD & APIS",
+              "title": "High-Concurrency REST APIs",
+              "description": "Clean, type-safe API layers built on Next.js and Node.js with role-based JWT security."
+            },
+            {
+              "number": "03",
+              "tag": "AUTOMATION",
+              "title": "Workflow & Data Automation",
+              "description": "Automated reconciliation, invoice generation, and third-party webhook integrations."
+            },
+            {
+              "number": "04",
+              "tag": "CONSULTING",
+              "title": "Codebase Rescue & Audits",
+              "description": "Hands-on engineering intervention to identify bottlenecks, optimize queries and unblock deployments."
+            }
+          ]
+        }
+      },
+      {
+        "id": "blk-terminal-1",
+        "type": "terminal",
+        "enabled": true,
+        "title": "System Diagnostic Terminal",
+        "data": {
+          "title": "TERMINAL DIAGNOSTIC",
+          "path": "~/enterprise/health-check",
+          "lines": [
+            { "num": "01", "type": "cmd", "text": "$ code benchmark --service=all" },
+            { "num": "02", "type": "add", "text": "+ Postgres pool: 24 active, 0 queued" },
+            { "num": "03", "type": "add", "text": "+ Memory consumption: 142MB steady" },
+            { "num": "04", "type": "out", "text": "> CPU load: 4.2% across cluster" },
+            { "num": "05", "type": "out", "text": "> Status: HEALTHY (Production grade)" }
+          ]
+        }
+      },
+      {
+        "id": "blk-projects-1",
+        "type": "projects",
+        "enabled": true,
+        "title": "Selected Enterprise Deployments",
+        "data": {
+          "title": "Selected Enterprise Deployments",
+          "subtitle": "Real systems running in production for commercial clients worldwide.",
+          "categoryFilter": "ALL",
+          "limit": 4
+        }
+      },
+      {
+        "id": "blk-cta-1",
+        "type": "cta",
+        "enabled": true,
+        "title": "Call To Action",
+        "data": {
+          "badge": "START YOUR PROJECT",
+          "heading": "Ready to build scalable software with hands-on engineers?",
+          "description": "Talk directly to our development team. No sales fluff — just architecture, milestones and delivery.",
+          "buttonText": "Schedule a Discovery Call",
+          "buttonLink": "mailto:hasgtagcode.solutions@gmail.com",
+          "secondaryButtonText": "View All Projects",
+          "secondaryButtonLink": "/work"
+        }
+      }
+    ]
+  }
+]
+
